@@ -2,7 +2,9 @@ import React from 'react';
 import './item-list.css';
 
 const ItemList = ({data}) => {
-
+  if (data == undefined ) {
+    console.log('ndaaaa')
+  }
   return (
     <ul className='user-list'>
       <li className='user-list__item'>
@@ -11,6 +13,8 @@ const ItemList = ({data}) => {
           <p className='user-list__name'>
             {`${data[0].firstName} `} 
             {`${data[0].lastName}`}
+            {`${data[1].firstName} `} 
+            {`${data[1].lastName}`}
           </p>
           <label htmlFor="name1">
             <input id="name1" name="user-A" type="radio" value="not active"/>
