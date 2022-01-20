@@ -1,17 +1,29 @@
-import React from 'react';
+import React, {useState, useCallback, useEffect, useMemo} from "react";
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import ItemList from './component/item-list';
+import Backend from './component/backend';
+import axios from 'axios'
+
+const App = () => {
+  const data = Backend();
+    
+  return (
+    <div className="container">
+      <main>
+        <form>
+          <ItemList data={data}/>
+        </form>
+      </main>
+      <aside>
+        <p>Employees birthday</p>
+      </aside>
+    </div>
+  )
+  
+}
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <App />,
   document.getElementById('root')
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

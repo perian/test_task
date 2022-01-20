@@ -11,3 +11,20 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.container {
+  padding: 0 30px;
+  display: flex;
+  flex-direction: row;
+}
+
+main {
+  flex-basis: 70%;
+  outline: 1px solid brown;
+}
+
+aside {
+  flex-basis: 30%;
+  outline: 1px solid burlywood;
+  text-align: center;
+}
