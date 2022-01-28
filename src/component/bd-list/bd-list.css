@@ -1,0 +1,11 @@
+.bd-list {
+  padding: 0 20px;
+}
+
+.month {
+  padding: 5px;
+}
+
+.month:nth-child(2n + 2) {
+  background-color: #d3d3d3fb;
+}
